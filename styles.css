@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    line-height: 1.6;
+	color: #a5a5a5;
+}
+
+h1.center-title {
+	font-family: helvetica;
+	letter-spacing: 8px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #db9b8c;
+	text-align: center;
+	padding: 40px 0 ;
+	text-transform: uppercase;
+}
+
+.card h2 {
+	font-family: helvetica;
+	color: #db9b8c;
+	text-align: center;
+}
+
+header {
+    position: relative;
+    background-image: url('file:///D:/Responsive%20Web%20Page/images/hero-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 4rem;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay color */
+    z-index: 1;
+}
+
+header h1 {
+    position: relative;
+    z-index: 2;
+    color: #b5b5b5;
+    letter-spacing: 9px;
+    font-family: georgia;
+    text-transform: uppercase;
+    font-size: 33px;
+}
+
+
+header p {
+	position: relative;
+    z-index: 2;
+	font-size: 14px;
+    letter-spacing: 2px;
+    color: gainsboro;
+}
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 1rem;
+    overflow: hidden;
+    width: calc(33% - 2rem);
+    max-width: 400px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    display: block;
+    width: 100%;
+}
+
+.card-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-content p {
+    margin: 1rem 0;
+}
+
+.card-content button {
+    background-color: #9d6d61;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.card-content button:hover {
+    background-color: #444;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 2rem);
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+	
+	h1.center-title {
+		font-size: 1.5rem;
+	}
+
+    header p {
+        font-size: 1rem;
+    }
+}
